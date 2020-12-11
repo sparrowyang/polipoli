@@ -60,8 +60,10 @@ def info():
         index+=1
 
 def index(request):
-    #l,p = load_data()
+    l,p = load_data()
     context = {}
+    context['video_name_list'] = l
+    context['video_path_list'] = p
     context['info'] = 'POLIPOLI by sparrowyang v1.0'
     #js_data = {l,p}
     #return HttpResponse(l)

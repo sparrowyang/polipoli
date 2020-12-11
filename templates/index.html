@@ -6,38 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
     {% load static %}
     <link rel="stylesheet" href="{% static "mdui-v1.0.1/css/mdui.min.css" %}"/>
-    <script src="{% static "mdui-v1.0.1/js/mdui.min.js" %}" ></script>
+    <script src="{% static "mdui-v1.0.1/js/mdui.min.js" %}"></script>
 </head>
 <body>
-<body>
-  <div class="mdui-container">
-    <h1>{{ info }}</h1>
-      <div class="mdui-panel" mdui-panel>
-
-  <div class="mdui-panel-item">
-    <div class="mdui-panel-item-header">First</div>
-    <div class="mdui-panel-item-body">
-      <p>First content</p>
+<div class="mdui-container">
+    <div class="mdui-toolbar mdui-color-theme">
+        <a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">menu</i></a>
+        <span class="mdui-typo-title">{{ info }}</span>
+        <div class="mdui-toolbar-spacer"></div>
+        <a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>
+        <a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">refresh</i></a>
+        <a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">more_vert</i></a>
     </div>
-  </div>
 
-  <div class="mdui-panel-item">
-    <div class="mdui-panel-item-header">Second</div>
-    <div class="mdui-panel-item-body">
-      <p>Second content</p>
+    <div class="mdui-panel" mdui-panel>
+
+        <div class="mdui-panel-item">
+            <div class="mdui-panel-item-header">BiBli Exxport</div>
+            <div class="mdui-panel-item-body">
+                {% for vide_name in video_name_list %}
+                    <li>{{ video_name }}</li>
+                {% endfor %}
+                <button class="mdui-btn mdui-btn-raised"></button>
+
+            </div>
+        </div>
+
+        <div class="mdui-panel-item">
+            <div class="mdui-panel-item-header">Second</div>
+            <div class="mdui-panel-item-body">
+                <p>Second content</p>
+            </div>
+        </div>
+
+        <div class="mdui-panel-item">
+            <div class="mdui-panel-item-header">Third</div>
+            <div class="mdui-panel-item-body">
+                <p>Third content</p>
+            </div>
+        </div>
+
     </div>
-  </div>
-
-  <div class="mdui-panel-item">
-    <div class="mdui-panel-item-header">Third</div>
-    <div class="mdui-panel-item-body">
-      <p>Third content</p>
-    </div>
-  </div>
-
 </div>
-  </div>
 </body>
 
-</body>
 </html>
