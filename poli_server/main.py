@@ -58,8 +58,8 @@ def info():
 
 def index():
     l,p = load_data()
-    js_data = {l,p}
-    return HttpResponse(json.dumps(js_data))
+    #js_data = {l,p}
+    return HttpResponse(j)
 # load_data()
 # info()
 # out_index = int(input())
