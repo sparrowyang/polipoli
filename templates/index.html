@@ -3,10 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static "mdui-v1.0.1/css/mdui.min.css" %}"/>
+    <script src="{% static "mdui-v1.0.1/js/mdui.min.js" %}" ></script>
 </head>
 <body>
+<body>
   <div class="mdui-container">
-    <p>{{inof}}</p>
+    <h1>{{ info }}</h1>
+      <div class="mdui-panel" mdui-panel>
+
+  <div class="mdui-panel-item">
+    <div class="mdui-panel-item-header">First</div>
+    <div class="mdui-panel-item-body">
+      <p>First content</p>
+    </div>
   </div>
+
+  <div class="mdui-panel-item">
+    <div class="mdui-panel-item-header">Second</div>
+    <div class="mdui-panel-item-body">
+      <p>Second content</p>
+    </div>
+  </div>
+
+  <div class="mdui-panel-item">
+    <div class="mdui-panel-item-header">Third</div>
+    <div class="mdui-panel-item-body">
+      <p>Third content</p>
+    </div>
+  </div>
+
+</div>
+  </div>
+</body>
+
 </body>
 </html>

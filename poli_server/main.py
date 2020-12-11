@@ -24,7 +24,9 @@ def quality(path,js):
     
 
 def load_data():
+
     main_path = '/storage/emulated/0/Android/data/tv.danmaku.bili/download/'
+    #main_path = '/home/sparrow/tmp'
     dirs = os.listdir(main_path)
     for i in dirs:
         #dirss = os.listdir(main_path+i+'/'+'1')
@@ -58,18 +60,12 @@ def info():
         index+=1
 
 def index(request):
-    l,p = load_data()
+    #l,p = load_data()
     context = {}
-    context['info'] = '''
-    -----------------------------------------
-    ┏━┓┏━┓╻  ╻┏━┓┏━┓╻  ╻
-    ┣━┛┃ ┃┃  ┃┣━┛┃ ┃┃  ┃
-    ╹  ┗━┛┗━╸╹╹  ┗━┛┗━╸╹ by sparrowyang v1.0
-    -----------------------------------------
-    '''
+    context['info'] = 'POLIPOLI by sparrowyang v1.0'
     #js_data = {l,p}
     #return HttpResponse(l)
-    render(request, 'index.html', context)
+    return render(request, 'index.html', context)
 # load_data()
 # info()
 # out_index = int(input())
