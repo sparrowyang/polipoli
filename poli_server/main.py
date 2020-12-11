@@ -56,7 +56,7 @@ def info():
         print(index,' : ',i)
         index+=1
 
-def index():
+def index(request):
     l,p = load_data()
     #js_data = {l,p}
     return HttpResponse(l)
