@@ -6,6 +6,7 @@
 # 2. choose a vidoe to comba and use ffmpeg to do it
 import os
 from django.http import HttpResponse
+from django.shortcuts import render
 import json
 #ji = sys.argv[1]
 #path = '/storage/emulated/0/Android/data/tv.danmaku.bili/download/31634578/'+ji+'/16/'
@@ -58,8 +59,17 @@ def info():
 
 def index(request):
     l,p = load_data()
+    context = {}
+    context['info'] = '''
+    -----------------------------------------
+    ┏━┓┏━┓╻  ╻┏━┓┏━┓╻  ╻
+    ┣━┛┃ ┃┃  ┃┣━┛┃ ┃┃  ┃
+    ╹  ┗━┛┗━╸╹╹  ┗━┛┗━╸╹ by sparrowyang v1.0
+    -----------------------------------------
+    '''
     #js_data = {l,p}
-    return HttpResponse(l)
+    #return HttpResponse(l)
+    render(request, 'index.html', context)
 # load_data()
 # info()
 # out_index = int(input())
